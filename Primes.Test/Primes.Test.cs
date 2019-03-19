@@ -63,5 +63,18 @@ namespace Primes.Test
             Assert.IsTrue(result[0] is 2 && result[1] is 3);
         }
 
+        [TestMethod]
+        public void GivenAValueOfTen_TheExpectedResultIsAListOfTwoThreeFiveSeven()
+        {
+            var value = 10;
+
+            var result = Primes.FindPrimes(value);
+
+            Assert.IsTrue(
+                result[0] is 2 &&
+                result[1] is 3 &&
+                result[2] is 5 &&
+                result[3] is 7);
+        }
     }
 }
