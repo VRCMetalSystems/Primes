@@ -22,11 +22,13 @@ namespace Primes
 
         public static bool IsPrime(int N)
         {
+            // Math trick based on the associativity rules
+            int max = (int)(Math.Sqrt(N) + 1);
             // Negative Numbers, 0, 1, and evens are instantly out
             if (N < 2) return false;
             if (N < 4) return true;
             if (IsEven(N)) return false; // Have to check this after we move past 2
-            for(int n = 3; n < N; n+= 2)
+            for(int n = 3; n <= max; n+= 2)
             {
                 if (IsDivisor(N, n)) return false;
             }
