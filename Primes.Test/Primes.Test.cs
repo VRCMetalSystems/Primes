@@ -76,5 +76,21 @@ namespace Primes.Test
                 result[2] is 5 &&
                 result[3] is 7);
         }
+
+        [TestMethod]
+        public void GivenAValueOfThirteen_TheExpectedResultIsAListOfPrimesUpToAndIncludingThirteen()
+        {
+            var value = 13;
+
+            var result = Primes.FindPrimes(value);
+
+            Assert.IsTrue(
+                result[0] is 2 &&
+                result[1] is 3 &&
+                result[2] is 5 &&
+                result[3] is 7 &&
+                result[4] is 11 &&
+                result[5] is 13);
+        }
     }
 }
