@@ -11,7 +11,7 @@ namespace Primes.Test
         [TestInitialize]
         public void PrimesInitialize()
         {
-            // Not needs as Primes is a Static Class
+            // Not needed as Primes is a Static Class
         }
 
         [TestMethod]
@@ -19,12 +19,13 @@ namespace Primes.Test
         {
             // Arrange - Setup the values for the function
             var One = 1;
+            var empty = new List<int>();
 
-            // Act
+            // Act - Perform an operation
             var result = Primes.FindPrimes(One);
 
-            // Assert
-            Assert.AreEqual(new List<int>(), result);
+            // Assert - Check for validity
+            Assert.IsTrue(empty.Count == result.Count);
         }
     }
 }

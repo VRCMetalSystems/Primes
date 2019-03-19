@@ -6,5 +6,5 @@
 @mytag
 Scenario: Find the Prime Numbers up to 1
 	Given I have entered one as N
-	When I execute findPrimes with value one
+	When I execute FindPrimes with value one
 	Then the result should be an empty list

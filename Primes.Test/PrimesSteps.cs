@@ -15,7 +15,7 @@ namespace Primes.Test
             ScenarioContext.Current.Add("One", 1);
         }
 
-        [When(@"I execute findPrimes with value one")]
+        [When(@"I execute FindPrimes with value one")]
         public void WhenIExecuteFindPrimesWithValueOne()
         {
             var One = (int)ScenarioContext.Current["One"];
