@@ -40,7 +40,17 @@ namespace Primes.Test
             var result = Primes.FindPrimes(One);
 
             // Assert - Check for validity
-            Assert.IsTrue(empty.Count == result.Count && empty.Count == 0);
+            Assert.IsTrue(empty.Count.Equals(result.Count) && empty.Count is 0);
+        }
+
+        [TestMethod]
+        public void GivenAValueOfTwo_TheExpectedResultIsAListContainingOnlyTwo()
+        {
+            var Two = 2;
+
+            var result = Primes.FindPrimes(Two);
+
+            Assert.IsTrue(result[0] is 2);
         }
     }
 }

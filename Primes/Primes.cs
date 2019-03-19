@@ -10,7 +10,13 @@ namespace Primes
     {
         public static List<int> FindPrimes(int N)
         {
-            return new List<int>();
+            var result = new List<int>();
+            if (N < 2)
+                return result;
+            if (N == 2)
+                result.Add(N);
+
+            return result;
         }
     }
 }
