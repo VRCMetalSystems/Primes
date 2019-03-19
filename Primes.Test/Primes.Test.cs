@@ -52,5 +52,16 @@ namespace Primes.Test
 
             Assert.IsTrue(result[0] is 2);
         }
+
+        [TestMethod]
+        public void GivenAValueOfThree_TheExpectedResultIsAListContainingOnlyTwoAndThree()
+        {
+            var Three = 3;
+
+            var result = Primes.FindPrimes(Three);
+
+            Assert.IsTrue(result[0] is 2 && result[1] is 3);
+        }
+
     }
 }
