@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Primes
 {
-    public class Class1
+    public static class Primes
     {
+        public static List<int> FindPrimes(int N)
+        {
+            return new List<int>();
+        }
     }
 }
